@@ -1,0 +1,1271 @@
+<!doctype html>
+
+<!-- This HTML structure was provided by charlyllo in https://github.com/charlyllo/doctemplate
+and tuned, turned into one-file and repurposed by Marty Lauterbach -->
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dokumentation MMI Infotainmentsystem</title>
+    <meta name="description" content="Festhaltung des ISO 9241 Designprozesses">
+    <meta name="author" content="Marty Lauterbach, Joshua Jeglinski, Meinhard Holzknecht, David Dumbrava">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            letter-spacing: 0px;
+            color: #333;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Noto Serif', serif;
+            font-size: 39px;
+            line-height: 42px;
+            margin-bottom: 50px;
+
+        }
+
+        h2 {
+            font-family: 'Noto Serif', serif;
+            font-size: 28px;
+            line-height: 30px;
+            text-align: center;
+            color: #333;
+            margin-block-start: 40px;
+            margin-block-end: 30px;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
+        }
+
+        p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar {
+            overflow: hidden;
+            background-color: #0098f1;
+            color: #333;
+            top: 0;
+            width: 100%;
+            height: 70px;
+            font-size: 15px;
+            text-align: right;
+            padding: 12px 0 0 0;
+            position: fixed;
+            z-index: 1;
+        }
+
+        .navbar a {
+            margin-right: 40px;
+            color: #333;
+        }
+
+        .navbar a:active {
+            text-decoration: underline;
+        }
+
+        .right a {
+            float: right;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        .clear {
+            background-color: #fff;
+            height: auto;
+        }
+
+        .nav-top {
+            border-top: 8px solid #0098f1;
+        }
+
+        .row {
+            max-width: 63rem;
+            margin: auto;
+            display: block;
+        }
+
+        .content {
+            padding: 22px;
+        }
+
+        .wrapper {
+            display: flex;
+            padding: 22px;
+        }
+
+        .sidepanel {
+            width: 200px;
+            margin-top: 120px;
+            background-color: #fff;
+            overflow-x: hidden;
+            position: fixed;
+            height: 80%;
+
+        }
+
+        .sidepanel a.title {
+            font-family: 'Noto Serif', serif;
+            font-size: 18px;
+            font-weight: 600;
+            text-align: left;
+            text-decoration: none;
+            color: #333;
+            display: block;
+            padding-bottom: 12px;
+        }
+
+        .sidepanel a.section {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            text-align: left;
+            line-height: 30px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidepanel a.sub-section {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 15px;
+            text-align: left;
+            line-height: 25px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+            padding-left: 20px;
+
+        }
+
+        .sidepanel a.title:hover,
+        .sidepanel a.section:hover,
+        .sidepanel a.sub-section:hover {
+            text-decoration: underline;
+        }
+
+        .main-col p {
+            font-size: 15px;
+            line-height: 24px;
+            margin-bottom: 36px;
+        }
+
+        .right-col {
+            margin-top: 100px;
+            text-align: left;
+            width: 100%;
+            margin-left: 220px;
+        }
+
+        .right-col h1 {
+            font-size: 24px;
+            line-height: 28px;
+            margin-bottom: 24px;
+        }
+
+        .right-col h2 {
+            font-size: 21px;
+            line-height: 24px;
+            margin-bottom: 30px;
+            text-align: left;
+            margin-block-start: 20px;
+            margin-block-end: 10px;
+        }
+
+        .right-col p {
+            font-size: 16px;
+            line-height: 22px;
+            margin-bottom: 36px;
+        }
+
+        .right-col a {
+            color: #0098f1;
+            text-decoration: underline;
+        }
+
+        .right-col ol {
+            margin-block-start: 10px;
+        }
+
+        .logo {
+            width: 150px;
+            float: left;
+            margin: -10px 30px;
+        }
+
+        .divider {
+            width: 40px;
+            height: 4px;
+            background: #0098f1;
+            border-radius: 30px;
+            margin: 8px auto;
+        }
+
+        .left {
+            margin: 20px 0;
+        }
+
+
+        .footer a {
+            color: #333;
+        }
+
+        .space {
+            height: 30px;
+            width: 100%;
+            float: left;
+        }
+
+        .double {
+            height: 60px;
+        }
+
+        /* Break Points */
+
+        /* Extra small-small devices (phones, 420px and down) */
+        @media only screen and (max-width: 420px) {
+
+            .logo {
+                width: 100px;
+            }
+
+            .navbar {
+                height: auto;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+        }
+
+        /* Extra small devices (phones, 650px and down) */
+        @media only screen and (max-width: 650px) {
+
+            .logo {
+                width: 115px;
+                margin: -10px 0;
+            }
+
+            .navbar a {
+                padding-bottom: 5px;
+                margin-left: 40px;
+                margin-right: 0;
+            }
+
+
+            .wrapper {
+                display: block;
+            }
+
+            .sidepanel {
+                width: 100%;
+                text-align: center;
+                position: relative;
+                height: auto;
+            }
+
+            .sidepanel a.title,
+            .sidepanel a.section,
+            .sidepanel a.sub-section {
+                text-align: center;
+            }
+
+            .left {
+                margin: 20px auto;
+            }
+
+            .right-col {
+                position: relative;
+                margin-top: 20px;
+                margin-left: 0;
+
+            }
+        }
+
+        /* Small devices (portrait tablets and large phones, 650px and up) */
+        @media only screen and (min-width: 650px) {
+
+            .logo {
+                margin: -10px 0;
+            }
+
+            .right a {
+                float: right;
+                padding-bottom: 5px;
+            }
+
+        }
+
+        /* Medium devices (landscape tablets, 768px and up) */
+        @media only screen and (min-width: 768px)  {
+            .logo {
+                  margin: -10px 0;
+              }
+        }
+        /* Large devices (laptops/desktops, 992px and up) */
+        @media only screen and (min-width: 992px) {}
+
+        /* End Break Points */
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar clear nav-top">
+    <div class="row content">
+        <a href="#"><img class="logo" src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Logo.png" alt="MMI Infotainmentsystem Logo"></a>
+        <a class="right" style="text-decoration: underline;" href="#"><i class="fas fa-book"></i>&nbsp; Dokumentation</a>
+        <a class="right" ><i class="fas fa-paper-plane"></i>&nbsp; martin.lauterbach@student.reutlingen-university.de</a>
+        </br>
+        <a class="right"><i class="fas fa-paper-plane"></i>&nbsp; joshua.jeglinski@student.reutlingen-university.de</a>
+        </br>
+        <a class="right"><i class="fas fa-paper-plane"></i>&nbsp; meinhard.holzknecht@student.reutlingen-university.de</a>
+        </br>
+        <a class="right"target="_blank"><i class="fas fa-paper-plane"></i>&nbsp; david.dumbrava@student.reutlingen-university.de</a>
+        </br>
+    </div>
+</div>
+
+<div class="container clear">
+    <div class="row wrapper">
+
+        <div class="sidepanel">
+
+            <a class="title" href="#Einleitung">Einleitung</a>
+
+            <a class="section" href="#Über">Über dieses Projekt</a>
+            <a class="section" href="#Technologie">Genutzte Technologien</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#Nutzungskontext">Nutzungskontext</a>
+
+            <a class="section" href="#Nutzer">Nutzer</a>
+            <a class="section" href="#Umwelt">Umwelt</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#Personas">Personas</a>
+
+            <a class="section" href="#Persona1">Persona 1</a>
+            <a class="sub-section" href="#1Basic Information">Basic Information</a>
+            <a class="sub-section" href="#1Mehr über die Person">Mehr über die Person</a>
+
+            <a class="section" href="#Persona2">Persona 2</a>
+            <a class="sub-section" href="#2Basic Information">Basic Information</a>
+            <a class="sub-section" href="#2Mehr über die Person">Mehr über die Person</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#Anforderungen">Anforderungen</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#Designlösung">Designlösung</a>
+
+            <a class="section" href="#Durchgang">Durchgang</a>
+
+            <a class="section" href="#Willkommen" style="color: #54A9FF">Willkommen</a>
+            <a class="sub-section" href="#WillkommenDesign" style="color: #54A9FF">Design</a>
+            <a class="sub-section" href="#Willkommen1" style="color: #54A9FF">Iteration 1</a>
+            <a class="sub-section" href="#Willkommen2" style="color: #54A9FF">Iteration 2</a>
+            <a class="sub-section" href="#Willkommen3" style="color: #54A9FF">Iteration 3</a>
+            <a class="sub-section" href="#Willkommen4" style="color: #54A9FF">Iteration 4</a>
+            <a class="sub-section" href="#Willkommen5" style="color: #54A9FF">Iteration 5</a>
+
+            <a class="section" href="#Machine_Control" style="color: #B692F7">Machine_Control</a>
+            <a class="sub-section" href="#Machine_ControlDesign" style="color: #B692F7">Design</a>
+            <a class="sub-section" href="#Machine_Control1" style="color: #B692F7">Iteration 1</a>
+            <a class="sub-section" href="#Machine_Control2" style="color: #B692F7">Iteration 2</a>
+            <a class="sub-section" href="#Machine_Control3" style="color: #B692F7">Iteration 3</a>
+            <a class="sub-section" href="#Machine_Control4" style="color: #B692F7">Iteration 4</a>
+
+            <a class="section" href="#Motor_Values" style="color: #FF9108">Motor_Values</a>
+            <a class="sub-section" href="#Motor_ValuesDesign" style="color: #FF9108">Design</a>
+            <a class="sub-section" href="#Motor_Values1" style="color: #FF9108">Iteration 1</a>
+            <a class="sub-section" href="#Motor_Values2" style="color: #FF9108">Iteration 2</a>
+            <a class="sub-section" href="#Motor_Values3" style="color: #FF9108">Iteration 3</a>
+            <a class="sub-section" href="#Motor_Values4" style="color: #FF9108">Iteration 4</a>
+
+            <a class="section" href="#Audio" style="color: #54A9FF">Audio</a>
+            <a class="sub-section" href="#AudioDesign" style="color: #54A9FF">Design</a>
+            <a class="sub-section" href="#Audio1" style="color: #54A9FF">Iteration 1</a>
+            <a class="sub-section" href="#Audio2" style="color: #54A9FF">Iteration 2</a>
+            <a class="sub-section" href="#Audio3" style="color: #54A9FF">Iteration 3</a>
+            <a class="sub-section" href="#Audio4" style="color: #54A9FF">Iteration 4</a>
+            <a class="sub-section" href="#Audio5" style="color: #54A9FF">Iteration 5</a>
+
+            <a class="section" href="#Settings"style="color: #B692F7">Settings</a>
+            <a class="sub-section" href="#SettingsDesign"style="color: #B692F7">Design</a>
+            <a class="sub-section" href="#Settings1"style="color: #B692F7">Iteration 1</a>
+            <a class="sub-section" href="#Settings3"style="color: #B692F7">Iteration 3</a>
+            <a class="sub-section" href="#Settings5"style="color: #B692F7">Iteration 5</a>
+
+            <a class="section" href="#EmergencySignal"style="color: #FF9108">EmergencySignal</a>
+            <a class="sub-section" href="#EmergencySignalDesign"style="color: #FF9108">Design</a>
+            <a class="sub-section" href="#EmergencySignal1"style="color: #FF9108">Iteration 1</a>
+            <a class="sub-section" href="#EmergencySignal2"style="color: #FF9108">Iteration 2</a>
+            <a class="sub-section" href="#EmergencySignal5"style="color: #FF9108">Iteration 5</a>
+
+            <a class="section" href="#GPS"style="color: #54A9FF">GPS</a>
+            <a class="sub-section" href="#GPSDesign"style="color: #54A9FF">Design</a>
+            <a class="sub-section" href="#GPS1"style="color: #54A9FF">Iteration 1</a>
+            <a class="sub-section" href="#GPS2"style="color: #54A9FF">Iteration 2</a>
+            <a class="sub-section" href="#GPS3"style="color: #54A9FF">Iteration 3</a>
+            <a class="sub-section" href="#GPS5"style="color: #54A9FF">Iteration 5</a>
+
+            <a class="section" href="#Call"style="color: #B692F7">Call</a>
+            <a class="sub-section" href="#CallDesign"style="color: #B692F7">Design</a>
+            <a class="sub-section" href="#Call1"style="color: #B692F7">Iteration 1</a>
+            <a class="sub-section" href="#Call2"style="color: #B692F7">Iteration 2</a>
+            <a class="sub-section" href="#Call5"style="color: #B692F7">Iteration 5</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#Evaluation">Evaluation</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#accesibility">Barrierefreiheit</a>
+
+            <div class="divider left"></div>
+
+            <a class="title" href="#moreinfo">Mehr Infos</a>
+
+         <div class="space double"></div>
+
+        </div>
+
+        <div class="right-col">
+            <h1 id="Einleitung">Einleitung</h1>
+
+            <p>Im Rahmen des Studienmoduls "Mensch Maschinen Kommunikation" im Wintersemester 2024/2025 des
+            Studienganges Medien- und Kommunikationsinformatik an der Hochschule Reutlingen wurde folgendes Infotainmentsystem
+            als Prüfungsleistung von den Studierenden Marty Lauterbach, Joshua Jeglinski, Meinhard Holzknecht und David Dumbrava erstellt.</p>
+
+            <p>Das Designprojekt geht dabei die Schritte der ISO-Norm 9241 durch, und resultiert damit in mehrere iterative Durchläufe, welche diese
+            Dokumentation protokolliert.</p>
+
+            <h2 id="Über">Über das Project</h2>
+
+            <p>Das Ziel des Projektes ist es, einen High-Fidelity Design-Prototypen eines in einem Auto zu befindendem INFOTAINMENT-Systems zu erstellen. </p>
+            <p>Daraus resultierend wurde der Nutzungskontext erfasst. Es wurden Personas erstellt, für deren Nutzen das System zugeschnitten wurde.
+            Aus diesen Erkenntnissen und Maßen wurden nach einer Satzschablone Anforderungen erstellt. </p>
+            <p> Die Designlösung, die Wir jeweils aus diesen Zuständen erstellt haben, wurden nach einer jeweiligen Evaluierung iterativ durch die zuvor Betitelten,
+            stetig verfeinerten Prozesse, diesen anforderungsgerechter gemacht.</p>
+
+            <h2 id="Technologie">Genutzte Technologien</h2>
+
+            <p>Zur gemeinsamen Arbeit am Projekt und deren Durchsetzung wurde FIGMA genutzt. Es wurden dabei nur Accounts benutzt, welche
+                mit einer Hochschul-E-Mail-Adresse der Hochschule Reutlingen verbunden sind.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="Nutzungskontext">Nutzungskontext</h1>
+
+            <h2 id="Nutzer">Nutzer</h2>
+
+            <p>
+                    Benutzer:
+                <ul>
+                    <li>Primäre Benutzer: Fahrer und Beifahrer</li>
+                    <li>Sekundäre Benutzer: Hintere Passagiere</li>
+                </ul>
+            </p>
+
+            <h2 id="Umwelt">Umwelt</h2>
+
+            <p>
+                    Aufgaben:
+                <ul>
+                    <li>Primäre Aufgaben: Navigation, Medienwiedergabe, Telefonie, Sprachsteuerung</li>
+                    <li>Sekundäre Aufgaben: Fahrzeugstatusüberwachung, Internetzugang, App-Nutzung</li>
+                </ul>
+            </p>
+
+            <p>
+                    Ausrüstung:
+                <ul>
+                    <li>Hardware: Touchscreen-Display, Lenkradsteuerung, Sprachsteuerungssystem, Lautsprecher, Mikrofon</li>
+                    <li>Software: Betriebssystem des Infotainment-Systems, Navigationssoftware, Medienplayer, Kommunikationssoftware</li>
+                </ul>
+            </p>
+
+            <p>
+                    Physische Umgebung:
+                <ul>
+                    <li>Fahrzeugtyp: PKW, SUV, LKW</li>
+                    <li>Beleuchtung: Tageslicht, Nachtbeleuchtung, Innenbeleuchtung des Fahrzeugs</li>
+                    <li>Geräuschpegel: Motorgeräusche, Straßengeräusche, Gespräche im Fahrzeug</li>
+                </ul>
+            </p>
+
+            <p>
+                    Soziale und kulturelle Umgebung:
+                <ul>
+                    <li>Interaktionen: Kommunikation zwischen Fahrer und Beifahrer, Nutzung durch verschiedene Altersgruppen und kulturelle Hintergründe</li>
+                    <li>Erwartungen: Hohe Benutzerfreundlichkeit, intuitive Bedienung, schnelle Reaktionszeiten</li>
+                </ul>
+            </p>
+
+            <p>
+                Organisatorische Umgebung:
+            <ul>
+                <li>Nutzungszeit: Während der Fahrt, im Stand</li>
+                <li>Nutzungsdauer: Kurzzeitige Nutzung (z.B. Anrufe tätigen) bis langfristige Nutzung (z.B. lange Fahrten mit Navigation und Medienwiedergabe)</li>
+            </ul>
+            </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="Personas">Personas</h1>
+
+            <h2 id="Persona1">Persona 1</h2>
+            <h3 id="1Basic Information">Basic Information</h3>
+
+            <p>Sabine Müller-Stachel
+                <ul>
+                    <li>Age: 34</li>
+                    <li> Occupation: head-kuratorin des Stadt-Kunstmuseums und selbstständige Autorin</li>
+                    <li>Location: Greifswald</li>
+                    <li>Mag Käsefondue, 2 Kinder, verheiratet</li>
+                    <li>Begleitet Kinder gern zu Ihren freizeitangeboten, hört mit Ihnen gern Benjamin Blümchen über Ihr Handy im Auto</li>
+                    <li>Wenn Sie allein ist, hört Sie Garage Rock und My Chemical Romance, um Sich an Ihre Emo-Zeit zurückzuerinnern</li>
+                    <li>Mag es, wenn an Geräten nicht viel eingestellt werden müssen</li>
+                </ul>
+            </p>
+
+            <p>
+                Sabine ist adoptiertes Kind einer Richterin und einer Rettungsassistentin.
+            </p>
+            <p>
+                Ihre Eltern haben Sie früh Sailor Moon schauen lassen,
+                was Sabine zum Fan von japanischen Zeichentrickserien machen lassen hat.
+                Über diese Faszination hat sie Ihren Mann kennengelernt.
+            </p>
+            <p>
+                Sabine hat ihre Leidenschaft für Kunst in eine Berufung als Head-Kuratorin des Stadtmuseums Greifwald
+                mittels eines sehr guten Kunststudiums und viel Managingerfahrung wandeln können.
+            </p>
+
+
+            <h3 id="1Mehr über die Person">Mehr über die Person</h3>
+
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/SabineM%C3%BCllerStachel.png"
+                 width="400px" height="500px"  alt="Sabine Müller-Stachel">
+
+            <p>
+                <strong> Interests (nicht in der Reihenfolge)</strong>
+            <ul>
+                <li> Kunst </li>
+                <li> Musik </li>
+                <li> Anime </li>
+                <li> Familie </li>
+                <li> Spaziergangfahrten, um Zeit weg von der Familie zu genießen </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Influences </strong>
+            <ul>
+                <li> New York Times </li>
+                <li> Bandcamp musik </li>
+                <li> Ihre Kinder </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Goals </strong>
+            <ul>
+                <li> Ein Bestsellerbuch schreiben </li>
+                <li> Zufrieden zu sein </li>
+                <li> Ihre Kinder glücklich machen </li>
+                <li> Die Welt erkunden, um neue Inspirationen zu sammeln </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Needs and expectations </strong>
+            <ul>
+                <li> Musikauswahl, Anschluss Smartphone für Benjamin Blümchen Podcasts </li>
+                <li> ästhetisches Interface </li>
+                <li> Wechsel Straßen/Sport Modi </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Motivations </strong>
+            <ul>
+                <li> Kinder zu allen Freizeitangeboten fahren, die Sie wollen und sie schafft
+                    Familienorientierte Funktionalität </li>
+                <li> Individualisierung und Unterhaltung:
+                    Sabine liebt Musik quer durch alle Genres und nutzt den Sport-Modus beim Alleinfahren. </li>
+                <li> Benutzerfreundlichkeit und Effizienz: Sabine bevorzugt Geräte, die wenig Einstellung erfordern. </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Pain points and frustrations </strong>
+            <ul>
+                <li> Komplizierte Auswahlmöglichkeiten, in denen man Fachwissen braucht  </li>
+                <li> hässliche Icons/Design </li>
+                <li> Menü über Menüs, wenn man länger suchen muss, um irgendwo hinzukommen </li>
+            </ul>
+            </p>
+
+            <h2 id="Persona2">Persona 2</h2>
+            <h3 id="2Basic Information">Basic Information</h3>
+
+            <p>Jürgen Müller
+                <ul>
+                    <li>Age: 33 </li>
+                    <li>Occupation: IT-Manager eines Luftfahrtunternehmens agiler Softwareentwicklungsgruppe</li>
+                    <li>Location: Greifswald</li>
+                    <li>More info: Macht im Urlaub Gebirgsfahrten, 2 Kinder, verheiratet, </li>
+                    <li>More info: introvertiert, Karriereorientiert, sportlich</li>
+                    <li>Hobbymäßig Jäger im örtlichen Dorfrevier seines Opas</li>
+                </ul>
+            </p>
+
+            <p>
+                Jürgen Bauer ist 35 Jahre alt, hat 2 Kinder und befindet sich in einer schönen Ehe.
+            </p>
+            <p>
+                Hauptberuflich ist er in der IT-Branche tätig und unterstützt damit ein großes Luftfahrtunternehmen.
+                In seiner Freizeit beschäftigt er sich größtenteils mit den Kindern, oder geht seinem Hobby, der Jagt, nach.
+            </p>
+            <p>
+                Seine Charaktereigenschaften prägen sich durch eine freundliche
+                und zuvorkommende Ausstrahlung, damit ist er in seinem Leben auf der Karriereleiter weit gekommen.
+                Er liebt von klein auf Pokemon und kauft sich jedes Pokemon Produkt und Spiel, dass er in die Hände bekommt.
+            </p>
+
+            <h3 id="2Mehr über die Person">Mehr über die Person</h3>
+
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/J%C3%BCrgenM%C3%BCller.png"
+                 width="400px" height="500px"  alt="Jürgen Müller">
+
+            <p>
+                <strong> Interests (nicht in der Reihenfolge)</strong>
+                <ul>
+                    <li> Pokemon </li>
+                    <li> Ambitionierter Jäger </li>
+                    <li> Liebt seine Kinder </li>
+                    <li> Liebender Ehemann </li>
+                    <li> IT </li>
+                </ul>
+            </p>
+
+            <p>
+                <strong> Influences </strong>
+            <ul>
+                <li> Fixiert auf die neuste Software/Hardware. Möchte immer up to date sein, um nichts zu verpassen. </li>
+                <li> Leicht ansprechbar auf ein futuristisches und modernes Design </li>
+                <li> Für Freizeit Aktivitäten mit der Familie nimmt er sich gerne mal mehr Zeit und geht die Dinge gelassener an. </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Goals </strong>
+            <ul>
+                <li> Jedes Jahr eine Gehaltserhöhung + zusätzliche Vergütung für herausragende Entwürfe. </li>
+                <li> Eine selbstständige Laufbahn in der IT-Branche. </li>
+                <li> Finanzielle Freiheit erlangen und die dadurch gewonnene Zeit mit der Familie verbringen. </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Needs and expectations </strong>
+            <ul>
+                <li> Eine gute habtische Bedienung der Steuerelemente </li>
+                <li> Die universelle Einstellung innerhalb eines Hub </li>
+                <li> Ein Pokemon-Theme </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Motivations </strong>
+            <ul>
+                <li> Musik hören </li>
+                <li> Viel Macht über seine Technologie </li>
+                <li> Auf dem neusten Stand bleiben und Nachrichten auch am Steuer abrufen </li>
+            </ul>
+            </p>
+
+            <p>
+                <strong> Pain points and frustrations </strong>
+            <ul>
+                <li> Eine Reizüberflutung von Auswahlmöglichkeiten </li>
+                <li> Zu viele anstrengende Farben im Design </li>
+            </ul>
+            </p>
+
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="Anforderungen">Anforderungen</h1>
+
+            <ul>
+                <li>Das Menü muss schnell (unter 2 Sekunden) erkennbare Icons nutzen.</li>
+                <li>Das System muss individualisierbar sein.</li>
+                <li>Das System muss Allradantrieb, Differenzialsperre, Haldex-Kupplung, Reifendruck und Seilwinde kontrollieren können.</li>
+                <li>Das System muss ein Audio-System haben.</li>
+                <li>Der Audioplayer muss Aux und Bluetooth als Input akzeptieren.</li>
+                <li>Das System muss AppleCarPlay und AndroidAuto kompatibel sein.</li>
+                <li>Das GPS muss in weniger als zwei Klicks ausgewählt werden können.</li>
+                <li>Der Benutzer und seine Konfigurationen müssen mit einem Klick im Hauptmenü ausgewählt werden können (oder in einem Startbildschirm bei Autostart).</li>
+                <li>Auf der linken Seite des Bildschirms müssen jederzeit in einer Pyramidennavigation die wichtigsten Kategorien ausgewählt werden können.</li>
+                <li>Das System muss ein Radio beinhalten, das im Audiomodus ausgewählt werden kann.</li>
+                <li>Das System muss ein jederzeit in 2 Klicks auswählbares SOS-System haben, das insgesamt in 3 Klicks gestartet werden kann (oder das SOS-System muss ausgewählt werden und starten, wenn die AirBags ausgelöst werden).</li>
+                <li>Das System muss den Fahrer beim Fahren weder behindern noch stören.</li>
+                <li>Das System sollte benutzerfreundlich sein.</li>
+                <li>Das System sollte Shortcuts für erfahrene User ermöglichen.</li>
+                <li>Die Icons sollten eindeutig erkennbar sein und eine gut bedienbare Größe haben.</li>
+                <li>Das System wird den Fahrer unterstützen.</li>
+                <li>Das System wird nicht störende Unterhaltung bieten.</li>
+                <li>Das System wird Voreinstellungen geben.</li>
+                <li>Das Auto kann sich mit dem Server des Herstellers verbinden, und Daten können abgefragt werden mit einer Smartphone-App.</li>
+                <li>Das System sollte ansprechend sein.</li>
+                <li>Das System muss kindersicher sein.</li>
+                <li>Das System sollte im Durchschnitt nicht mehr als 3 Klicks für die Auswahl einer Funktion benötigen.</li>
+                <li>Das System muss präzise und zuverlässige Navigation und Kartendienste unterstützen.</li>
+                <li>Der Startscreen sollte zuerst fragen, welcher Benutzer gerade ins Auto eingestiegen ist. Benutzerdefiniertes Account-Management. Alle Vorabinformationen sollen enthalten sein.</li>
+                <li>Des Hub des Interfaces enthält die einzelnen Komponenten wie Telefonbuch, Musik, Steuerelement (Autoeinstellungen), Radio, Spiele-App, Moviefunktion (nur außerhalb der Fahrt).</li>
+                <li>Das Infotainment beinhaltet alle unterstützenden Funktionen, navigiert von A nach B und speichert gleichzeitig viel befahrene Strecken, fragt aber gleichzeitig bei jeder individuellen Ausführung, ob dies gewollt ist. Die Bestätigung erfolgt auditiv, z.B. "Hey Mercedes, das hört sich gut an".</li>
+                <li>Das Interface schaltet Funktionen während der Fahrt ab, welche den Fahrstil gefährden könnten.</li>
+            </ul>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="Designlösung">Designlösung</h1>
+
+            <h2 id="Durchgang">Durchgang</h2>
+
+            <p>Das folgende Video zeigt die Designlösung, die nach der letzten Evaluierung die Anforderungen zu einem aktzeptiertem Grad erfüllt hat. </p>
+
+            <video width="720" height="400" controls alt="Designlösung Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Design.mp4" type='video/mp4'>
+            </video>
+
+            <p> Zusätzlich finden Sie das Video hochauflösend unter folgendem Link (Link leitet auf Youtube weiter zu einem ungelistetem Video)
+            <a href="https://youtu.be/YNtatie5IRY"> https://youtu.be/YNtatie5IRY </a>
+            </p>
+
+            <p> Wenn Sie den Figma-Prototyp selbst durchgehen wollen, können Sie dies mit folgendem Link tun:
+            <a href="https://www.figma.com/proto/AKUd87y3baaKMPUBH90z1w/MMI_WiSe24_Project-CarEntertainmentHID-Copy?node-id=0-1&p=f&viewport=600%2C-3105%2C0.31&t=5przUJgYdXUpA4jI-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2068%3A1927">
+                https://www.figma.com/proto/AKUd87y3baaKMPUBH90z1w/MMI_WiSe24_Project-CarEntertainmentHID-Copy?node-id=0-1&p=f&viewport=600%2C-3105%2C0.31&t=5przUJgYdXUpA4jI-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2068%3A1927 </a>
+            </p>
+
+            <p>
+                Falls Sie den Figma-Prototyp auf Ihrem Handy durchgehen wollen, können Sie dies über den folgenden QR-Code machen:
+                <p>
+                <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/frame.png" width="400px" height="400px"  alt="QR-Code for Figma-Prototyp">
+                </p>
+            </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Willkommen">Willkommen</h2>
+            <p> Marty </p>
+
+            <h3 id="WillkommenDesign">Design</h3>
+            <video width="720" height="400" controls muted alt="Willkommen Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Willkommen_smol.mp4" type='video/mp4'>
+            </video>
+
+            <h3 id="Willkommen1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Willkommen/Willkommen_1.png"
+                 width="700px" height="200px"  alt="Willkommen Iteration 1">
+
+            <p>In der ersten Iteration wurde auf einer klaren Benutzeroberfläche Wert gesetzt. </p>
+            <p> Ein einfacher Benutzerauswahl-Screen, ein klarer aufmerksamkeits- und informationsbringender Ladebildschirm sowie ein Hauptmenü, an dem sich
+                auf beiden Seite klar separiert aber über konstrachreiche Farben die Auswahlmöglichkeiten des Systems abheben.</p>
+
+            <p> Auf der Benutzeroberfläche sollte der Nutzer eine Auswahlmöglichkeit seines persönlichen Profils vornehmen, oder einen neuen erstellen. Da die
+                Personas Pokemon favorisieren, wurde das Thema Pokemon durch die Nutzung von Pokemon-Figuren als Icons gewählt.</p>
+
+            <p> Der Ladebildschirm enthält ein Ausrufezeichen aus Signalfarben, sowie einem InfoText, welches auf die Gefahr eines unkonzentrierten Fahrens hinweist.</p>
+
+            <p> Jeder folgende Bildschirm beinhaltet das gleiche außenstehende Muster an Icons, die als Component auf allen Slides vertreten sind. Diese ermöglichen eine schnelle (unter 3 Klicks)
+                Navigationen zu allen Punkten der Benutzeroberfläche. Es wurde ein abwechselndes Farbmuster gewählt, damit die unterschiedlichen Icons sich voneinander abheben.</p>
+
+            <h3 id="Willkommen2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Willkommen/Willkommen_2.png"
+                 width="700px" height="200px"  alt="Willkommen Iteration 2">
+            <p>In der zweien Iteration wurde auf eine Erweiterung des Hauptmenüs Wert gelegt. </p>
+            <p> Durch eine Hinzufügung eines Logos und einem "Pokemon-Edition by 4ReifenFürEinAllWetter"-Schriftzug im Pokemon-Font wurde
+            die Landing-Page den Personas Ansprüchen auf ein Pokemon-Theme gerechter.</p>
+            <p> Das Icon des Users und des SOS wanderten von den seitlichen Icons, die auf jeder Slides nach Start zu sehen sind, auf exklusiv dem Willkommen-Bildschirm.</p>
+            <p> Dies sollte die Seiten weniger voll wirken lassen, und versehentliche Klicks, auf die weniger oft benutzen, Symbole verringern.</p>
+            <p> Zudem wurden am oberen Bildschirmrand SlideTitel, ein Bluetooth-Symbol, eine Uhr und ein Rück-Knopf hinzugefügt, um mehr
+            Informationen und Funktionalitäten einzubringen.</p>
+            <p> Es wurden Icons der Abschnitte geändert, da es Feedback gab, dass die Icons nicht eindeutig genug waren.</p>
+
+            <h3 id="Willkommen3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Willkommen/Willkommen_3.png"
+                 width="700px" height="200px"  alt="Willkommen Iteration 3">
+            <p>In der dritten Iteration wurde eine Möglichkeit eingebunden, zurück auf den Hauptbildschirm zu kommen. Dafür wurde der Rück-Knopf mit einem Haus
+            ausgetauscht, welches zurück auf die Landing-Page leitet.</p>
+            <p> Zudem wurde der Text des Ladebildschirms verringert, um auf das Wesentliche zu beschränken und Nutzer nicht zu überwältigen.</p>
+
+            <h3 id="Willkommen4">Iteration 4</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Willkommen/Willkommen_4.png"
+                 width="700px" height="200px"  alt="Willkommen Iteration 4">
+            <p>In der vierten Iteration wurde der Ladebildschirm neu gestaltet, da die Farben zu sehr nach einem Fehler im System aussahen laut Feedback von Nutzern, und stattdessen
+            einem Wii-Ladebildschirm nachempfunden. Die Farbtöne sind nicht abschreckend, es wird durch das "Health and Safety" ruhig das Thema symbolisiert, und der Nutzer wird durch das
+            durchgehende Theme eingeladen, den Text zu lesen.</p>
+            <p> Am unteren Bildschirmrand wurde ein Aktionsbalken hinzugefügt, auf dem zentriert der Home-Button platziert wurde. Dies sollte ein einheitliches klares und intutitives navigieren
+            zwischen den UI-Abschnitten ermöglichen, und den Fokus der einzelnen Abschnitte auf die Mitte des Bildschirms ruhen lassen.</p>
+
+            <h3 id="Willkommen5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Willkommen/Willkommen_5.png"
+                 width="700px" height="200px"  alt="Willkommen Iteration 5">
+            <p>In der letzten Iteration wurde das SOS sowie ein Back-Button der unteren Aktionsleiste hinzugefügt, um eine schnelle und klare Navigation zu ermöglichen, die intutiv sowie messbar
+            in 3 Klicks möglich ist.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Machine_Control">Machine_Control</h2>
+            <p> David </p>
+            <h3 id="Machine_ControlDesign">Design</h3>
+            <video width="720" height="400" controls alt="Machine Control Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/MachineControl.mp4" type='video/mp4'>
+            </video>
+            <p>Im Video zur Maschinenkontrolle wird gezeigt, wie der Nutzer durch das Menü navigiert, einzelne
+                Systeme wie Allradantrieb, Differenzialsperre oder Traktionskontrolle aktivieren kann und wie sich
+                die Icons visuell zwischen aktivierten und deaktivierten Zuständen verändern.</p>
+
+            <h3 id="Machine_Control1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Maschine-Control_It_1.0.jpg"
+                 width="300px" height="200"  alt="Machine-Control Iteration 1.0">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Maschine-Control_It_1.1.jpg"
+                 width="300px" height="200px"  alt="Machine-Control Iteration 1.1">
+            <p>In der ersten Iteration des Maschinenkontrollbereichs werden grundlegende Funktionen für die Steuerung
+                und Überwachung der Fahrzeugmechanik dargestellt.</p>
+            <p>Die oberste Reihe zeigt Symbole für den Allradantrieb und die Differenzialsperre, die es dem Fahrer
+                ermöglichen, die Fahrzeugmechanik den Fahrbedingungen entsprechend anzupassen.</p>
+            <p>In der mittleren Reihe befinden sich Symbole für das ABS-System und die Fahrzeug-Traktionskontrolle,
+                die den Status dieser sicherheitsrelevanten Systeme anzeigen.</p>
+            <p>Im unteren Bereich der Anzeige wird der Reifendruck für jeden Reifen detailliert in Bar dargestellt,
+                ergänzt durch eine Warnanzeige für mögliche Abweichungen oder Probleme.</p>
+            <p>In dieser Iteration sind die Symbole im ersten Frame inaktiv und grau dargestellt, während sie im
+                zweiten Frame orange aufleuchten, um die Aktivierung der Funktionen anzuzeigen.</p>
+
+            <h3 id="Machine_Control2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Maschine-Control_It_2.jpg"
+                 width="300px" height="200px"  alt="Machine-Control Iteration 2">
+            <p>Die zweite Iteration bringt einige bedeutende Verbesserungen und neue Funktionen mit sich.</p>
+            <p>Eine wichtige Neuerung ist die Hinzufügung einer Seilwindensteuerung in der mittleren Reihe, die es
+                dem Fahrer erlaubt, die Winde ein- und auszufahren.</p>
+            <p>Darüber hinaus wurden die Beschriftungen „4WD“ und „DiffLock“ hinzugefügt, um die Symbole in der
+                oberen Reihe verständlicher zu machen.</p>
+            <p>Im unteren Bereich wurde der Reifendruckbereich durch ein deutliches „Tire Pressure Warning“-Label
+                ergänzt, um die Überwachungsfunktion noch klarer hervorzuheben. </p>
+            <p>Insgesamt wurden die aktivierten und deaktivierten Symbole durch ihre Farbgebung – Orange-aktiv
+                und Grau-inaktiv – klarer voneinander abgegrenzt. Diese Iteration schafft eine bessere Struktur
+                und führt erweiterte Kontrollmöglichkeiten ein, ohne die Übersichtlichkeit zu beeinträchtigen.</p>
+
+            <h3 id="Machine_Control3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Maschine-Control_It_4.jpg"
+                 width="300px" height="200px"  alt="Machine-Control Iteration 4">
+            <p>Die dritte Iteration führt mit dem Spurassistenten eine neue Sicherheitsfunktion ein, die im unteren
+                Bereich durch ein Straßenpiktogramm dargestellt wird. </p>
+            <p>Der Spurassistent ergänzt die bisherigen Funktionen und unterstützt den Fahrer bei der sicheren
+                Fahrspurhaltung.</p>
+            <p>Gleichzeitig wurde die Reifendruckanzeige aus den vorherigen Iterationen entfernt, um Platz für die
+                neue Funktion zu schaffen und das Layout schlanker zu gestalten. </p>
+            <p>Die Position der Seilwindensteuerung wurde beibehalten, wobei die Gesamtanordnung leicht überarbeitet
+                wurde, um eine noch bessere Übersicht zu gewährleisten. </p>
+            <p>Die klare Farbgebung, die aktivierte Funktionen in Orange und deaktivierte in Grau hervorhebt, bleibt
+                bestehen und sorgt für ein einheitliches visuelles Feedback. </p>
+            <p>Diese Iteration legt den Fokus auf eine neue Sicherheitsfunktion und eine optimierte Darstellung, die
+                Benutzerfreundlichkeit und Klarheit weiter steigert.</p>
+
+            <h3 id="Machine_Control4">Iteration 4</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Maschine-Control_It_5.jpg"
+                 width="300px" height="200px"  alt="Machine-Control Iteration 5">
+            <p>In der vierten und finalen Iteration wurden kleinere, aber bedeutende Optimierungen vorgenommen, um
+                die Benutzerfreundlichkeit weiter zu verbessern.</p>
+            <p>Die Seilwindensteuerung wurde nun mit einer zusätzlichen Beschriftung versehen, die die Funktionen
+                "Anziehen" und "Ablassen" klar benennt, wodurch die Bedienung intuitiver wird.</p>
+            <p>Die bereits eingeführten Hauptfunktionen wie Allradantrieb, Differenzialsperre, ABS,
+                Stabilitätskontrolle und Spurassistent bleiben bestehen, wobei die klare visuelle Trennung zwischen
+                aktiven (orange) und inaktiven (grau) Funktionen beibehalten wurde.</p>
+            <p>Zusätzlich wurden am unteren Bildschirmrand zwei neue Steuerelemente integriert: eine Zurück-Taste
+                und eine SOS-Taste, die eine schnellere Navigation und Notfallhilfe ermöglichen. Mit dieser Iteration
+                wird die Maschinenkontrolle im Infotainmentsystem final optimiert und bietet eine funktionale,
+                benutzerfreundliche und intuitiv verständliche Steuerung für den Fahrer.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Motor_Values">Motor_Values</h2>
+            <p> David </p>
+            <h3 id="Motor_ValuesDesign">Design</h3>
+            <video width="720" height="400" controls alt="Motor Values Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/MotorValues.mp4" type='video/mp4'>
+            </video>
+            <p>Im Abschnitt Motor Values demonstriert das Video die Interaktion mit den verschiedenen
+                Fahrzeugstatusanzeigen, darunter Kraftstoffstand, Motortemperatur und Serviceinformationen, sowie
+                den Übergang zur detaillierten Reifendruckanzeige durch einen Klick auf den entsprechenden Eintrag.</p>
+
+            <h3 id="Motor_Values1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_1.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 1">
+            <p>Die erste Iteration des Motor-Values-Abschnitts konzentriert sich auf die grundlegende Darstellung
+                wichtiger Motordaten in einer klar strukturierten Listenansicht.</p>
+            <p>Die Anzeige umfasst verschiedene essenzielle Werte zur Überwachung des Fahrzeugzustands, darunter
+                Kraftstoffstand, Motoröl, Kühlmittel, Serviceintervall, Turbodruck und Zündung. Jeder dieser Werte
+                wird in einer eigenen Zeile mit einem eindeutigen Symbol dargestellt, gefolgt von einem Statusbalken,
+                der die aktuelle Situation visualisiert.</p>
+            <p>Das System zeigt den aktuellen Zustand jedes Motorsystems mit einer einfachen „OK“-Kennzeichnung, was
+                eine schnelle Erfassung des Fahrzeugstatus ermöglicht. Beim Kraftstoffstand wird zudem ein konkreter
+                Wert (85 %) angegeben, während die anderen Parameter aktuell nur, als „OK“ markiert sind. </p>
+            <p>Diese erste Version konzentriert sich auf eine klare, textbasierte Darstellung mit Icons, die eine
+                intuitive Erfassung der Motorwerte ermöglichen, ohne zusätzliche visuelle Ablenkung.</p>
+
+            <h3 id="Motor_Values2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_2.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 2">
+            <p>In der zweiten Iteration des Motor-Values-Abschnitts wurde das Layout optimiert, um Platz für eine
+                zentrale Home-Taste am unteren Bildschirmrand zu schaffen.</p>
+            <p>Eine weitere Anpassung betrifft den Turbo-Wert, der in dieser Version entfernt wurde. Da es in diesem
+                Abschnitt keine aktiven Werte zur Anzeige gibt, könnte diese Information künftig in einem separaten
+                Diagnose- oder Warnungsbereich integriert werden.</p>
+            <p>Die restlichen Motorwerte wie Kraftstoffstand, Motoröl, Kühlmittel, Service und Zündung bleiben
+                erhalten und sind weiterhin übersichtlich mit Symbolen und Statusanzeigen dargestellt.</p>
+            <p>Insgesamt wurde das Layout aufgeräumt, um eine klarere Struktur zu schaffen und die
+                Benutzerfreundlichkeit zu verbessern.</p>
+
+            <h3 id="Motor_Values3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_4.0.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 4.0">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_4.1_TirePressure.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 4.1">
+            <p>In der dritten Iteration wurden weitere Anpassungen vorgenommen, um die Struktur und
+                Benutzerfreundlichkeit des Motor-Values-Bereichs zu optimieren.</p>
+            <p>Eine der auffälligsten Änderungen ist die Entfernung der Zündungsanzeige, ähnlich wie zuvor beim
+                Turbolader. Diese Entscheidung basiert auf der Überlegung, dass die Zündung in diesem Kontext keine
+                unmittelbaren Werte liefert, sondern eher ein Diagnosethema ist, das bei Fehlermeldungen angezeigt
+                werden kann.</p>
+            <p>Eine wichtige Neuerung ist die Integration der Reifendrucküberwachung in diesen Bereich. Während der
+                Reifendruck zuvor unter der Maschinenkontrolle geführt wurde, hat er nun eine eigene Position im
+                Motor-Values-Menü erhalten. Um die Lesbarkeit und Übersichtlichkeit zu verbessern, wurde der
+                Reifendruck in einem separaten Untermenü mit einer eigenen Anzeige realisiert. Diese zusätzliche
+                Frame-Ansicht zeigt den genauen Druckwert für jeden Reifen in Bar, um dem Fahrer eine detaillierte
+                Echtzeitüberwachung zu ermöglichen.</p>
+            <p>Darüber hinaus wurden die Werte der verbleibenden Parameter nun mit klareren numerischen Angaben
+                versehen. Der Kraftstoffstand wird in Kilometern angezeigt, während die Motoröl- und
+                Kühlmitteltemperatur in Grad Celsius ausgegeben wird. Das Serviceintervall zeigt das nächste
+                Wartungsdatum, und der Reifendruck wird als überprüfter Wert mit einem grünen Haken dargestellt.</p>
+            <p>Diese Änderungen sorgen für eine noch präzisere und verständlichere Darstellung der Motordaten,
+                während das neue Reifendruckmenü eine genauere Kontrolle dieser sicherheitsrelevanten Information
+                ermöglicht.</p>
+
+            <h3 id="Motor_Values4">Iteration 4</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_5.0.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 5.0">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/MotorValuesAndMachineControl/Motor-Values_It_5.1_TirePressure.jpg"
+                 width="300px" height="200px"  alt="Motor-Values Iteration 5.1">
+            <p>In der vierten und finalen Iteration des Motor-Values-Bereichs wurden nur noch kleinere Anpassungen
+                vorgenommen, um die Navigation und Benutzerfreundlichkeit weiter zu optimieren. </p>
+            <p>Die Struktur der Werteanzeige bleibt unverändert, allerdings wurde die Reifendrucküberwachung nun
+                interaktiver gestaltet. Der Reifendruckeintrag erscheint jetzt in einer hervorgehobenen, anklickbaren
+                Leiste, die visuell signalisiert, dass sich dahinter eine detaillierte Unterseite verbirgt.</p>
+            <p>Zusätzlich wurden am unteren Rand zwei neue Steuerungselemente integriert: eine Zurück-Taste und eine
+                SOS-Taste. </p>
+            <p>Mit dieser Iteration ist die Darstellung der Motorwerte vollständig optimiert. Alle relevanten
+                Fahrzeuginformationen sind nun klar strukturiert, interaktiv abrufbar und mit zusätzlichen
+                Bedienelementen für eine bessere Nutzererfahrung ergänzt worden.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Audio">Audio</h2>
+            <p> Joshua </p>
+            <h3 id="AudioDesign">Design</h3>
+            <video width="720" height="400" controls alt="Audio Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/audioVideo.mov" type='video/mp4'>
+            </video>
+            <p>In dem folgenden Video können Sie beispielhaft sehen, wie sich der User durch unsere Musikfunktion manövrieren könnte.
+            Hierbei hat man die Wahl zwischen den Musikstilen Rock und Pop zu wechseln, natürlich besteht auch die Möglichkeit eigene Titel
+            in der Rubrik Favourites anzulegen, außerdem kann der User aus unterschiedlichen Radiosendern wählen. Diese Kategorien
+            lassen sich über das Dropdownmenü ansteuern. Mithilfe der Lupe können Songs oder Interpreten auch selbständig gesucht werden.</p>
+            <h3 id="Audio1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I1audio%202025-01-14%20um%2020.37.24.png"
+                 width="300px" height="200px"  alt="Audio Iteration 1">
+            <p>Die erste Ausarbeitung eines Musikplayers, welcher zunächst nur ein einziges Lied enthält, aber dennoch schon die groben Bestandteile aufweist, auf die wir im Folgenden aufbauen konnten.</p>
+            <h3 id="Audio2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I2audio%202025-01-14%20um%2020.50.24.png"
+                 width="300px" height="200px"  alt="Audio Iteration 2">
+            <p>Der Musikplayer hat sich nicht verändert, jedoch wurde das Overlay angepasst und ein Homebutton wurde ergänzt.</p>
+            <h3 id="Audio3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I3audio%202025-01-14%20um%2021.01.59.png"
+                 width="300px" height="200px"  alt="Audio Iteration 3">
+            <p>Hinzugekommen ist auf der linken Seite ein Dropsymbol, welches ein Dropdownmenü öffnet, um andere Musikkategorien schnell auszuwählen. Außerdem wurde auf der rechten Seite ein Lupenicon ergänzt, welches dem User zur
+            spezifischen Musik- und Interpretenauswahl dient.</p>
+            <h3 id="Audio4">Iteration 4</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I4audio%202025-01-14%20um%2020.53.19.png"
+                 width="300px" height="200px"  alt="Audio Iteration 4">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/BildschirmfotoI4audio%202025-01-14%20um%2020.53.36.png"
+                 width="300px" height="200px"  alt="Audio Iteration 4 Keyboard">
+            <p>In dieser Iteration wurde ein zusätzlicher Frame ergänzt, dieser erscheint, wenn der User auf die Lupe im Musikplayer drückt. Durch die auftauchende Tastatur im Screen kann der User seinen Musik- oder Interpretenwunsch nach entsprechender Eingabe finden.</p>
+            <h3 id="Audio5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/BildschirmfotoI5AUDIO%202025-01-14%20um%2020.57.23.png"
+                 width="800px" height="200px"  alt="Audio Iteration 5">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I5audio%202025-01-14%20um%2020.57.41.png"
+                 width="800px" height="200px"  alt="Audio Iteration 5 Dropdown">
+            <p>In dieser Iteration wurde das Dropdownmenü vollumfänglich ausgebaut, jetzt ist der User auch in der Lage sehr schnell
+                zwischen den Kategorien Pop, Rock, Favourites und Radio zu wechseln.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Settings">Settings</h2>
+            <p> Meinhard </p>
+            <h3 id="SettingsDesign">Design</h3>
+            <video width="720" height="400" controls alt="Settings Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Settings_smol.mp4" type='video/mp4'>
+            </video>
+            <p>In diesem Video sehen sie wie ein potenzieller User durch alle Einstellungen navigieren könnte. In dem Clip kann
+                die Bluetooth-Einstellungen aufgerufen werden, die wiederum eine Vielzahl an Auswahlmöglichkeiten biete, wie das Einschalten des Bluetooths,
+                Sichtbarkeit, Änderung des Namens, die Kopplung und Entkopplung mit Geräten sowie Einstellungen bezüglich Stereo und Audio.
+                Außerdem kann man die Lautstärke und Helligkeit einstellen, den Crashreport anschauen und das ganze System auf die Werkeinstellungen zurücksetzen.</p>
+            <h3 id="Settings1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/Einstellung/EINSTELLUNG%201.Iteration.png"
+                 width="300px" height="200px" alt="Settings Iteration 1">
+            <p>In der ersten Iteration haben wir uns für ein schlichtes Design für den Hub entschieden, da es bei Einstellungen eher um Effizienz und Klarheit geht.
+            </p>
+            <h3 id="Settings3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/Einstellung/Einstellung%203.%20Iteration%20Teil%202.PNG"
+                 width="300px" height="200px"  alt="Settings Iteration 3 Part 2">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/Einstellung/Einstellungen%203.%20Iteration%202.PNG"
+                 width="1000px" height="200px"  alt="Settings Iteration 3 Part 1">
+            <p> In dieser Iteration haben wir die einzelnen Einstellungen ausgebaut und uns entschieden die "Mobile Daten" Einstellung zu streichen aus mangelnder Wichtigkeit.
+                Es ist jetzt möglich Bluetooth einzustellen, zu koppeln und zu entkoppeln, sich sichtbar/unsichtbar machen, seinen Namen zu ändern für die anderen Geräte sowie die Stereoeinstellung. Die Zurücksetzung
+                der Werkeinstellungen ist nun auch ausgearbeitet hier war es uns wichtig, dass man nicht aus Versehen alles zurücksetzt, deswegen haben wir bevor man bestätigen kann, dass man wirklich alles zurücksetzen will,
+                ein Kasten den man anklicken muss eingefügt. Auch Helligkeit und Sound wurde ausgeführt.</p>
+            <h3 id="Settings5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/Einstellung/Einstellung%205.%20iteration%20Teil%202.png"
+                 width="300px" height="200px"  alt="Settings Iteration 5 Part 2">
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/Einstellung/Einstellung%205.%20Iterartion.png"
+                 width="1000px" height="200px"  alt="Settings Iteration 5 Part 1">
+            <p>Bei unserer letzten Iteration haben wir den Text zur Zurücksetzung geändert, um den Kasten mehr hervorzuheben und noch einmal hervorzuheben was genau passiert. Sobald man auf Werkeinstellung
+                zurückgesetzt hat, haben wir die auch mehr an den Hub angepasst. Bei Helligkeit und Sound haben wir auch die nicht notwendigen Bars entfernt.  </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="EmergencySignal">EmergencySignal</h2>
+            <p> Marty </p>
+            <h3 id="EmergencySignalDesign">Design</h3>
+            <video width="720" height="400" controls alt="Emergency Signal Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Bildschirmaufnahme%20EmergencySignal_smol.mp4" type='video/mp4'>
+            </video>
+            <p>Die Funktion eines Notsignals spiegelt die Anforderung eines modernen OffRoad-Straßen-Hybrids wider, welcher es dem
+            Nutzer ermöglichen soll, schnell und sicher seine Aktivitäten mit dem Fahrzeug auszuführen.</p>
+
+            <p>Dafür ist ein einfach zu verstehendes Interface gedacht, welches sich automatisch bei erkannten Unfällen darstellt,
+            und in 2-3 Klicks ein Notsignal senden lässt.</p>
+
+            <p>Zudem soll es ermöglicht sein, manuell selbst ein spezifisches Notsignal an lokale Behörden zu senden.</p>
+
+            <p>Die Konzeption sieht mehrere Reiter zur Auswahl des Notfalls und eine klare Möglichkeit, zu SOS zu kommen und das SOS-Signal abzusenden.</p>
+
+            <h3 id="EmergencySignal1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/EmergSignal/1.png"
+                 width="700px" height="200px"  alt="Emergency Signal Iteration 1">
+            <p>In der ersten Iteration wurde versucht, ein klares Muster in der UI zu finden, welche intuitiv dem Benutzer in Stresssituationen behilflich sein sollte,
+            da es schnell verstanden werden kann.</p>
+            <p>Über den großen SOS Knopf sollte man auf eine Bedienung gelangen, die klar differenziert die Gruppierungen darstellt, in Signalfarben,
+            und die Möglichkeit, den Prozess abzubrechen.</p>
+            <p>Ein großes hervorgehobenes Feedback sollte bei erfolgreichem Senden erscheinen, um den Benutzer zu beruhigen, dass der Prozess erfolgreich war.</p>
+
+            <h3 id="EmergencySignal2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/EmergSignal/2.png"
+                 width="700px" height="200px"  alt="Emergency Signal Iteration 2">
+            <p>In Iteration 2 veränderten Wir die Farben, um Farbsehschwächen miteinzubeziehen. Dafür wurden diese Farben
+            gewählt, da Sie konstrastreich sowie im Farbspektrum so gelegen sind, dass Sie trotz Sehbehinderungen differenzierbar sind.</p>
+
+            <h3 id="EmergencySignal5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/EmergSignal/5.png"
+                 width="700px" height="200px"  alt="Emergency Signal Iteration 5">
+            <p>Um die Geballtheit der Informationen zu verringern, wurde die Gruppierung in seiner Umfangreichheit geschmälert. </p>
+            <p>Die wichtigsten Texte wurden durch ein BOLD des Fonts hervorgehoben.</p>
+            <p>Um eine flüssige Lesung zu ermöglichen, wurde der Help Needed Knopf zu einem "Yes, Help needed".</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="GPS">GPS</h2>
+            <p> Meinhard </p>
+            <h3 id="GPSDesign">Design</h3>
+            <video width="720" height="400" controls alt="GPS Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Bildschirmaufnahme%20GPS_smol.mp4" type='video/mp4'>
+            </video>
+            <p> In diesem Video sieht man wie man zwischen den Fenstern hin und her klicken kann. Es wird gezeigt wie man eine Route auswählt, ob es nun eine voreingespeicherte
+                Adresse oder eine eingegebene Adresse ist.</p>
+            <h3 id="GPS1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/GPS/GPS%201.%20Iterartion.png"
+                 width="800px" height="200px"  alt="GPS Iteration 1">
+            <p>In der ersten Iteration steht das Grundgerüst. Hier war uns wichtig die einzelnen Ansichten zu zeigen ohne zu sehr ins Detail zu gehen. Es stehen die
+                Anzeige, die man direkt sieht, wenn man auf GPS drückt (hier mitte), die Fahrtansicht und eine 3D-Ansicht.
+            </p>
+            <h3 id="GPS2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/GPS/GPS%202.%20Iteration.PNG"
+                 width="500px" height="200px"  alt="GPS Iteration 2">
+            <p>Nach Absprache haben wir uns entschieden die 3D-Ansicht ersteinmal nicht zu implementieren/ weiter zu verfolgen.</p>
+            <h3 id="GPS3">Iteration 3</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/GPS/GPS%203.%20Iteration.PNG"
+                 width="1000px" height="200px"  alt="GPS Iteration 3">
+            <p>In der Iteration haben wir uns dazu entschieden einzelne Wettereinflüsse wie starker Wind oder kalte Temperaturen anzeigen zu lassen.
+                Ebenso haben wir uns entschieden die Ankunft Uhrzeit nicht mehr bei den Buttons zu haben und haben die Buttons angepasst. Dazugekommen ist jetzt noch die Auswahlmöglichkeit
+                Adressen, die öfters benutzt werden (wie Arbeit oder die Heimadresse) schneller auszuwählen, man kommt vom GPS-Hub durch "Meine Adressen" dorthin.
+                Alternativ kann man auch durch das klicken von "Route" im neuen Fenster die Start und Zieladresse eingeben.
+            <h3 id="GPS5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/GPSEINSTELLUNG/GPS/GPS%205.%20Iteration.png"
+                 width="800px" height="200px" alt="GPS Iteration 5">
+            <p>In der letzten Iteration haben wir das Starten der Route auf die Auswahlmöglichkeiten der Adressen verschoben sowie das Desing der Tastatur und der Bestätigung angepasst.
+                Nun kann man schnell und intuitiv eine Adresse auswählen und zu seinem Ziel kommen.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h2 id="Call">Call</h2>
+            <p> Joshua </p>
+            <h3 id="CallDesign">Design</h3>
+            <video width="720" height="400" controls alt="Call Design Video">
+                <source src="https://github.com/mklemmingen/mklemmingen/raw/refs/heads/main/MMI_Files/Call.mp4" type='video/mp4'>
+            </video>
+            <p>Im folgenden Video ist zu sehen wie beispielhaft durch die Telefonfunktion innerhalb unseres INFOTAINMENT-Systems gesteuert wird. Hier haben Sie Zugriff auf Kontakte, Favoriten und vergangene Anrufe. </p>
+            <h3 id="Call1">Iteration 1</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I1call%202025-01-14%20um%2020.33.48.png"
+                 width="800px" height="200px"  alt="Call Iteration 1">
+            <p>In der folgenden Iteration wurden für uns die Kernpunkte einer Telefonfunktion dargestellt, welche da wären: Kontakte, letzte Anrufe und favorisierte Kontakte. Der Status, beziehungsweise die Erreichbarkeit einer Person ist durch
+            die farbliche Erkennung von rot und grün gekennzeichnet.</p>
+            <h3 id="Call2">Iteration 2</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I2%20call%202025-01-14%20um%2020.50.37.png"
+                 width="800px" height="200px"  alt="Call Iteration 2">
+            <p>Um zu erkennen, auf welchem Icon man sich gerade befindet, wurde das entsprechende Icon ausgeblendet. Die Funktion der Statuserkennung wurde entfernt, da sie innerhalb einer Telefonfunktion im Auto
+            überflüssig ist. Des Weiteren wurde das Overlay angepasst und ein Homebutton ergänzt.</p>
+            <h3 id="Call5">Iteration 5</h3>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/Call/Bildschirmfoto%20I5call%202025-01-14%20um%2020.58.15.png"
+                 width="900px" height="200px"  alt="Call Iteration 5">
+            <p>Das Overlay wurde nochmals um einen Backbutton und einen SOSbutton ergänzt. Innerhalb der Telefonfunktion ist es nun möglich einen Kontakt auch anzurufen.</p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="Evaluation">Evaluation</h1>
+
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/SUS1.png"
+                 width="250" height="500" alt="SUS Evaluation 1">
+            <p>Die erste mit SUS durchgeführte Evaluation fand im Rahmen eines Fahrsimulator-Tests statt.</p>
+            <p>Eine Testperson wurde aufgefordert, ohne Eingewöhnung in das System einen Fahrkurs zu erledigen, dabei auf Seiner
+            linken einen Knopf zu drücken, wenn dieser rot aufleuchtet und ein Tablet auf der Rechten zu bedienen, welche
+            den INFOTAINMENT-System Prototyp darstellte. Ihm wurden in regelmäßigen Abschnitten Aufgaben gegeben, die
+            auf dem Tablet am System zu erledigen waren. Beispiel:"Sie geraten plötzlich in einen Unfall, kontaktieren sie Hilfe und drücken
+            Sie den SOS Knopf".</p>
+
+            <p> Die Person füllte im Anschluss das SUS aus.:</p>
+            <p>
+                Proband1 SUS Auswertung:
+                1:4 (4-1=3)
+                2:1(5-1=4)
+                3:4 (4-1=3)
+                4:1 (5-1=4)
+                5:5 (5-1=4)
+                6:1 (5-1=4)
+                7:5 (5-1=3)
+                8:1 (5-1=4)
+                9:5 (5-1=4)
+                10:1 (5-1=4)
+
+                Summe SUS= 38*2,5= 76+19=95
+            </p>
+
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/SUS2.png"
+            width="300" height="500" alt="SUS Evaluation 2">
+            <p>Die zweite mit SUS durchgeführte Evaluation wurde durch die Freundin von Joshua durchgeführt. Ihr wurde der
+            Prototyp gezeigt, und darauffolgend wurde das SUS ausgefüllt.</p>
+
+            <p> Die Person füllte im Anschluss das SUS aus.:</p>
+            <p>
+                Proband2 SUS Auswertung:
+                1:4 (4-1=3)
+                2:2 (5-2=3)
+                3:4 (4-1=3)
+                4:1 (5-1=3)
+                5:5 (5-1=4)
+                6:1 (5-1=4)
+                7:5 (5-1=4)
+                8:2 (5-2=3)
+                9:5 (5-1=4)
+                10:2 (5-2=3)
+
+                Summe des SUS:= 24*2,5= 72
+            </p>
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="accesibility">Barrierefreiheit</h1>
+
+            <p>Die Kontrastreichheit wurde versucht zu gewährleisten, indem ein 7:1 Kontrast Verhältnis von Hintergrund zu Signalfarben gewählt wurde.</p>
+            <p> Die Farben #54A9FF, #FF9108, #FC7AB1, #B692F7 und #F6F7F9 auf einem Hintergrund von #071A32 wurden speziell dafür genutzt.</p>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/1_9itQUbQR4d_gzR0QgJwK6Q%202.png"
+            width="400" height="700" alt="Contrast Ratio Example">
+
+            <p>Um mögliche Sehschwächen miteinzubeziehen, wurde eine Rot und Grün Variante von Tönen zwischen #B3589A und #9BBF85 gewäht.</p>
+            <img src="https://raw.githubusercontent.com/mklemmingen/mklemmingen/refs/heads/main/MMI_Files/5Ways-PurpleGreen%201.png"
+                 width="600" height="200" alt="Rot Grün Schwäche Farbvariante">
+
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+
+            <h1 id="moreinfo">Mehr Informationen</h1>
+
+            <p>
+                <a property="dct:title" rel="cc:attributionURL" href="https://www.figma.com/proto/AKUd87y3baaKMPUBH90z1w/MMI_WiSe24_Project-CarEntertainmentHID-Copy?node-id=0-1&p=f&viewport=600%2C-3105%2C0.31&t=5przUJgYdXUpA4jI-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=2068%3A1927">
+                    InfotainmentSystem Pokémon Edition
+                </a>
+                by
+                <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/mklemmingen">
+                Marty Lauterbach, Meinhard Holzknecht, Joshua Jeglinski, David Dumbrava
+                </a>
+                is licensed under
+                <a href="https://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-ShareAlike 4.0 International
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+                    <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+                </a>
+            </p>
+
+            <div class="doublespace"></div>
+            <div class="divider" style="width:24%; margin:30px 0;"></div>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
